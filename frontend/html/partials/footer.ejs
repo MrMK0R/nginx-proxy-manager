@@ -1,2 +1,22 @@
+		<script>
+			// When the page loads, get the theme from localStorage and apply it
+			var savedTheme = localStorage.getItem('theme');
+			if (savedTheme) {
+				document.body.setAttribute('data-theme-mode', savedTheme);
+			} else {
+				// If there's no saved theme, default to dark
+				document.body.setAttribute('data-theme-mode', 'dark');
+			}
+
+			document.getElementById('themeButton').addEventListener('click', function() {
+				var body = document.body;
+				var currentTheme = body.getAttribute('data-theme-mode');
+				var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+				body.setAttribute('data-theme-mode', newTheme);
+
+				// Save the new theme to localStorage
+				localStorage.setItem('theme', newTheme);
+			});
+		</script>
 	</body>
 </html>

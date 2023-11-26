@@ -49,6 +49,12 @@ a:hover {
     --dark-bg-color:rgb(39, 39, 39);
 }
 
+#themeButton{
+    position:absolute !important;
+    bottom:50px;
+    right:50px;
+}
+
 body[data-theme-mode="dark"],
 [data-theme-mode="dark"] #header,
 [data-theme-mode="dark"] .navbar-light,
